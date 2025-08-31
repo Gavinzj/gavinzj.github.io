@@ -1,4 +1,129 @@
+/* Base styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-.logo-image { max-width:105%; height:auto; overflow:hidden;}
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
 
-.abstract-text { color: #606060; }
+.navbar-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navbar-nav {
+    margin-top: 1rem;
+}
+
+.nav-item {
+    margin-right: 1.5rem;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    color: #000;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #555;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #000;
+}
+
+/* Content sections */
+section {
+    margin: 3rem 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Links */
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-sidebar {
+        margin-bottom: 2rem;
+    }
+    
+    .navbar-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-item {
+        margin-right: 1rem;
+    }
+}
+
+/* Container adjustments */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
