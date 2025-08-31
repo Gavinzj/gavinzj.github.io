@@ -69,6 +69,25 @@ section {
     margin: 3rem 0;
 }
 
+/* Internship notice */
+.internship-notice {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    background-color: #f8f9fa;
+    border-left: 3px solid #0366d6;
+    border-radius: 4px;
+}
+
+.internship-notice p {
+    margin: 0;
+    color: #24292e;
+    line-height: 1.6;
+}
+
+.internship-notice strong {
+    color: #0366d6;
+}
+
 /* Recent Work section */
 .work-item {
     margin-bottom: 2rem;
