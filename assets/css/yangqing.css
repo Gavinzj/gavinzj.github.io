@@ -69,6 +69,30 @@ section {
     margin: 3rem 0;
 }
 
+/* Recent Work section */
+.work-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-2px);
+}
+
+.work-item h3 {
+    color: #0366d6;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.work-item p {
+    color: #555;
+    margin-bottom: 0;
+}
+
 h2 {
     font-size: 1.8rem;
     font-weight: 700;
@@ -92,6 +116,42 @@ ul {
 
 li {
     margin-bottom: 0.5rem;
+}
+
+/* Opportunities section */
+.opportunity-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0366d6;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+.opportunity-box h3 {
+    color: #0366d6;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.opportunity-box h4 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #24292e;
+}
+
+.opportunity-box ul {
+    margin-bottom: 1.5rem;
+}
+
+.opportunity-box li {
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.opportunity-box p {
+    color: #555;
+    line-height: 1.6;
 }
 
 /* Footer */
