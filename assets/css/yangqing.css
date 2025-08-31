@@ -183,11 +183,16 @@ li {
 }
 
 /* Visitor Map */
-.visitor-map {
-    margin: 2rem auto;
+.visitor-map-container {
+    margin: 1.5rem 0;
     text-align: center;
+}
+
+.visitor-map-container img {
     max-width: 100%;
-    overflow: hidden;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .text-muted {
