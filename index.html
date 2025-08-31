@@ -8,6 +8,7 @@
     <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="assets/css/yangqing.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -73,10 +74,30 @@
                     </p>
                 </section>
 
-                <section id="publications">
+                <!-- <section id="publications">
                     <h2>Publications</h2>
                     <p class="text-muted"f>Coming soon...</p>
-                </section>
+                </section> -->
+
+                <!-- <section id="ai-chat">
+                    <h2>Chat with AI Assistant</h2>
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message assistant">
+                                <div class="message-content">
+                                    Hello! I'm an AI assistant trained to help you learn about Gavin's research in AI, 
+                                    particularly in mathematical reasoning and large language models. Feel free to ask me anything!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <input type="text" id="chat-input" placeholder="Ask me about Gavin's research...">
+                            <button id="send-button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section> -->
 
                 <section id="contact">
                     <h2>Contact</h2>
@@ -91,8 +112,50 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="visitor-map">
+                <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=eGQEi24JFTTYCNVPVxauoHLOborMzoxq9v1mRMEN4WU"></script>
+            </div>
             <p class="text-muted">Last Updated: March 2024</p>
         </div>
     </footer>
+
+    <!-- Chat functionality script -->
+    <script>
+        $(document).ready(function() {
+            const chatMessages = $('#chat-messages');
+            const chatInput = $('#chat-input');
+            const sendButton = $('#send-button');
+
+            function addMessage(content, isUser) {
+                const messageDiv = $('<div>').addClass('message').addClass(isUser ? 'user' : 'assistant');
+                const contentDiv = $('<div>').addClass('message-content').text(content);
+                messageDiv.append(contentDiv);
+                chatMessages.append(messageDiv);
+                chatMessages.scrollTop(chatMessages[0].scrollHeight);
+            }
+
+            function handleUserMessage() {
+                const message = chatInput.val().trim();
+                if (message) {
+                    addMessage(message, true);
+                    chatInput.val('');
+                    
+                    // Here you would typically make an API call to your AI backend
+                    // For now, we'll simulate a response
+                    setTimeout(() => {
+                        const response = "I'm a demo AI assistant. To make me fully functional, you'll need to connect me to an AI backend like GPT-4 or your custom LLM!";
+                        addMessage(response, false);
+                    }, 1000);
+                }
+            }
+
+            sendButton.click(handleUserMessage);
+            chatInput.keypress(function(e) {
+                if (e.which == 13) {
+                    handleUserMessage();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
