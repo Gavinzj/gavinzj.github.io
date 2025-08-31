@@ -182,17 +182,11 @@ li {
     text-align: center;
 }
 
-/* Visitor Map */
-.visitor-map-container {
-    margin: 1.5rem 0;
-    text-align: center;
-}
-
-.visitor-map-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Clustrmaps */
+#clustrmaps-widget-v2 {
+    width: 10% !important;
+    height: auto !important;
+    margin: 1rem auto;
 }
 
 .text-muted {
