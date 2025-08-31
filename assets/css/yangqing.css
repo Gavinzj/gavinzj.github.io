@@ -183,10 +183,12 @@ li {
 }
 
 /* Clustrmaps */
-#clustrmaps-widget-v2 {
+#clstr_globe {
     width: 10% !important;
-    height: auto !important;
-    margin: 1rem auto;
+}
+
+#clstr_globe > img {
+    width: 10% !important;
 }
 
 .text-muted {
